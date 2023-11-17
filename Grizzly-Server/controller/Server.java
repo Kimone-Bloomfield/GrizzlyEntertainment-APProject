@@ -318,7 +318,6 @@ public class Server extends Thread implements CustomerService{
         }
         
     }
-
     private void addEquipment(Equipment equipment) {
         String sql = "INSERT INTO grizzly.equipment(equipment_id, equipment_name, equipment_status, equipment_category, cost)" 
                 + " VALUES ('" + equipment.getEquipment_id() + "','" + equipment.getEquipment_name() + "','" + equipment.getEquipment_status() + "','"  
@@ -339,7 +338,7 @@ public class Server extends Thread implements CustomerService{
     }
 
 
-    private void viewEquipmentCategory(String equipment_category) {
+     private void viewEquipmentCategory(String equipment_category) {
         try (Session session = SessionFactoryBuilder.getSessionFactory().openSession()) {
             CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
             CriteriaQuery<Equipment> criteriaQuery = criteriaBuilder.createQuery(Equipment.class);
@@ -355,7 +354,7 @@ public class Server extends Thread implements CustomerService{
             logger.error(ex);
         }
     }
-
+	
     private void getAllEquipment() {
         try (Session session = SessionFactoryBuilder.getSessionFactory().openSession()) {
             CriteriaQuery<Equipment> criteriaQuery = session.getCriteriaBuilder().createQuery(Equipment.class);
@@ -412,7 +411,7 @@ public class Server extends Thread implements CustomerService{
         }
     }
 
-    private void getCustomerMessagesById(String cust_id) throws IOException {
+   private void getCustomerMessagesById(String cust_id) throws IOException {
         try (Session session = SessionFactoryBuilder.getSessionFactory().openSession()) {
             Query<Message> query = session.createQuery("FROM Message WHERE cust_id = :cust_id", Message.class);
             query.setParameter("cust_id", cust_id);
@@ -708,7 +707,6 @@ public class Server extends Thread implements CustomerService{
 
 
 }
-
 
 
 
