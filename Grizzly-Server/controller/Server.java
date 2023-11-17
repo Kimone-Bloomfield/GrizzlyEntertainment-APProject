@@ -338,7 +338,7 @@ public class Server extends Thread implements CustomerService{
     }
 
 
-     private void viewEquipmentCategory(String equipment_category) {
+    private void viewEquipmentCategory(String equipment_category) {
         try (Session session = SessionFactoryBuilder.getSessionFactory().openSession()) {
             CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
             CriteriaQuery<Equipment> criteriaQuery = criteriaBuilder.createQuery(Equipment.class);
@@ -354,7 +354,7 @@ public class Server extends Thread implements CustomerService{
             logger.error(ex);
         }
     }
-	
+
     private void getAllEquipment() {
         try (Session session = SessionFactoryBuilder.getSessionFactory().openSession()) {
             CriteriaQuery<Equipment> criteriaQuery = session.getCriteriaBuilder().createQuery(Equipment.class);
