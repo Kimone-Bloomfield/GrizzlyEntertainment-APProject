@@ -130,7 +130,7 @@ public class Client {
         }
     }
 
-    public void sendCustomerMessage(Message message) {
+        public void sendCustomerMessage(Message message) {
         try {
             // Write the Message object to the ObjectOutputStream
             objOs.writeObject(message);
