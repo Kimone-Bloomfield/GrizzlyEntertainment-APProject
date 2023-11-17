@@ -119,7 +119,7 @@ public class Client {
             logger.error(e);
         }
     }
-
+	
     public void sendEquipment(Equipment equipment) {
         try {
             // Write the Equipment object to the ObjectOutputStream
@@ -250,7 +250,7 @@ public class Client {
         }
     }
 
-    public boolean receiveRentalResponse() {
+     public boolean receiveRentalResponse() {
         try {
             // Read and return the boolean value from the ObjectInputStream
             return (boolean) objIs.readObject();
