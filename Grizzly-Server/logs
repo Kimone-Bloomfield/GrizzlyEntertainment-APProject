@@ -1,0 +1,6 @@
+2023-11-17 00:50:04 INFO  SDriver:22 - Serving Client1
+2023-11-17 00:50:04 INFO  Server:97 - Server Streams configured
+2023-11-17 00:50:06 INFO  Server:102 - Received action: Login Employee
+2023-11-17 00:50:08 INFO  SDriver:22 - Serving Client2
+2023-11-17 00:50:08 INFO  Server:97 - Server Streams configured
+2023-11-17 00:50:08 INFO  Server:102 - Received action: View Rental Requests
