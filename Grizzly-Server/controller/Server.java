@@ -459,7 +459,7 @@ public class Server extends Thread implements CustomerService{
     }
 
 
-    private void getAllRentalRequests() {
+ private void getAllRentalRequests() {
         String selectQuery = "SELECT * FROM rental";
         try {
             stmt = dbConn.createStatement();
