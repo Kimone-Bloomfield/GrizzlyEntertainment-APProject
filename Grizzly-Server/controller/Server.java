@@ -523,7 +523,7 @@ public class Server extends Thread implements CustomerService{
             logger.error(e);
             objOs.writeObject(false); // Indicate failure
         }
-    }
+    } 
 
     
     private void acceptRentalRequest(Rental rental) {
